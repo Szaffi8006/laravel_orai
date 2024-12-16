@@ -18,11 +18,13 @@ Route::put("/updatedrink", [DrinkController::class, "updateDrink"]);
 Route::delete("/deletedrink/{id}", [DrinkController::class, "destroyDrink"]);
 
 Route::get("/packages", [PackageController::class, "getPackages"]);
+Route::get("/package", [PackageController::class, "getPackage"]);
 Route::post("/newpackage", [PackageController::class, "newPackage"]);
-Route::put("/updatepackabe", [PackageController::class, "updatePackage"]);
+Route::put("/updatepackage", [PackageController::class, "updatePackage"]);
 Route::delete("/deletepackage/{id}", [PackageController::class, "destroyPackage"]);
 
 Route::get("/types", [TypeController::class, "getTypes"]);
+Route::get("/type", [TypeController::class, "getType"]);
 Route::post("/newtype", [TypeController::class, "newType"]);
 Route::put("/updatetype", [TypeController::class, "updateType"]);
-Route::delete("/deletetype/{id}", [TypeController::class, "destroyPackage"]);
+Route::delete("/deletetype/{id}", [TypeController::class, "destroyType"]);

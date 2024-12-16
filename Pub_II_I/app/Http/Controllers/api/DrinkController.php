@@ -38,19 +38,18 @@ class DrinkController extends ResponseController
         return $drink;
     }
 
-    public function updateDrink(Request $request){
+    public function updateDrink( Request $request ) {
 
-        $drink = $this->getDrink($request);
-        $drink->drink = $request["drink"];
-        $drink->amount = $request["amount"];
-        $drink->type_id = $request["type_id"];
-        $drink->package_id = $request["package_id"];
+        $drink = $this->getDrink( $request );
+        $drink->drink = $request[ "drink" ];
+        $drink->amount = $request[ "amount" ];
+        $drink->type_id = $request[ "type_id" ];
+        $drink->package_id = $request[ "package_id" ];
 
-        $drink->update();
+        $drink->save();
 
         return $drink;
     }
-
     public function destroyDrink($id){
 
         $drink = Drink::find($id);
